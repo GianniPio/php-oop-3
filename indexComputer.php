@@ -49,7 +49,9 @@ il corretto funzionamento dell'algoritmo -->
         }
         public function setModello($modello){
 
-            if((strlen($modello) <3 || strlen($modello) >20) || !is_string($modello))
+            $lstrinModel = strlen($modello);
+
+            if(($lstrinModel <3 || $lstrinModel >20) || !is_string($modello))
             throw new Exception("Il modello deve avere minimo 3 o massimo 20 caratteri");
 
             $this -> modello = $modello; 
@@ -71,7 +73,9 @@ il corretto funzionamento dell'algoritmo -->
         }
         public function setMarca($marca){
 
-            if((strlen($marca) <3 || strlen($marca) >20) || !is_string($marca))
+            $lstringMarc = strlen($marca);
+
+            if(($lstringMarc <3 || $lstringMarc >20) || !is_string($marca))
             throw new Exception("La marca deve avere minimo 3 o massimo 20 caratteri");
 
             $this -> marca = $marca;
