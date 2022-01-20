@@ -43,8 +43,10 @@
             return $this -> username;
         }
         public function setUsername($username) {
-
-            if(strlen($username) < 3 or strlen($username) > 16)
+            
+            $lstring = strlen($username);
+            
+            if($lstring < 3 || $lstring > 16)
             throw new Exception("Scrivi un username compreso tra i 3 e i 16 caratteri");
 
             $this -> username = $username;
@@ -83,7 +85,7 @@
     try {
 
     $u1 = new User("Gianni", "ciao21?");
-    $u1 -> setAge("21");
+    $u1 -> setAge(21);
     $u1 -> printMe();
     } catch (Exception $e) {
         echo "<span>" . $e -> getMessage() . "</span>";
